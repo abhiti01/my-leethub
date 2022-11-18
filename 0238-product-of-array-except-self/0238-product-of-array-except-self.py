@@ -1,0 +1,14 @@
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        answer =[1 for _ in range(len(nums))]
+        left=1
+        right=1
+        for i in range(len(nums)):
+            answer[i] *= left
+            left *= nums[i]
+
+        for i in range(len(nums)-1,-1,-1):
+            answer[i] *= right
+            right *= nums[i]
+
+        return answer
