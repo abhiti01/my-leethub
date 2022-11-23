@@ -5,7 +5,6 @@ class Solution:
         answer=[]
         nums = sorted(nums)
         for i in range(len(nums)-2):
-            #move left till it is same
             if i>0 and nums[i]==nums[i-1]:
                 continue
             left = i+1
